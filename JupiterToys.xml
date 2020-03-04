@@ -1,0 +1,55 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+
+<suite name="Jupiter Toys Tests" verbose="1" parallel="tests">
+
+    <parameter name="url" value="https://jupiter.cloud.planittesting.com/#/"/>
+
+    <parameter name="os" value="windows"/>
+
+    <parameter name="node" value="http://192.168.1.67:4444"/>
+
+
+
+    <test name="Tests on Firefox" preserve-order="true" group-by-instances="true">
+
+        <parameter name="browser" value="firefox"/>
+
+        <classes>
+
+            <class name="Jupitertoys.JupiterToysApplication"/>
+
+        </classes>
+
+    </test>
+
+
+<!--
+    <test name="Tests on IE11" preserve-order="true" group-by-instances="true">
+
+        <parameter name="browser" value="ie11"/>
+
+        <classes>
+
+            <class name="Jupitertoys.JupiterToysApplication"/>
+
+        </classes>
+
+    </test>
+    
+    -->
+
+
+
+    <test name="Tests on Chrome" preserve-order="true" group-by-instances="true">
+
+        <parameter name="browser" value="chrome"/>
+
+        <classes>
+
+            <class name="Jupitertoys.JupiterToysApplication"/>
+
+        </classes>
+
+    </test>
+</suite>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite parallel="tests" name="Failed suite [Jupiter Toys Tests]" guice-stage="DEVELOPMENT">
+  <parameter name="node" value="http://192.168.1.67:4444"/>
+  <parameter name="os" value="windows"/>
+  <parameter name="url" value="https://jupiter.cloud.planittesting.com/#/"/>
+  <test thread-count="5" parallel="tests" name="Tests on Chrome(failed)">
+    <parameter name="browser" value="chrome"/>
+    <classes>
+      <class name="Jupitertoys.JupiterToysApplication">
+        <methods>
+          <include name="contactJupiterToys"/>
+          <include name="ShopJupiterToys"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- Jupitertoys.JupiterToysApplication -->
+    </classes>
+  </test> <!-- Tests on Chrome(failed) -->
+</suite> <!-- Failed suite [Jupiter Toys Tests] -->
